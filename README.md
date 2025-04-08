@@ -26,6 +26,7 @@ Python 3, Pytorch>=1.13.0, torchvision>=0.17.0 are required for the current code
 You can simply start the envirionment and sintall other dependencies by running:
 ```
 conda env create -f environment.yml
+conda install pytorch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 pytorch-cuda=12.1 -c pytorch -c nvidia
 conda activate metaAI
 ```
 
