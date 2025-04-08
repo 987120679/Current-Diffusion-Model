@@ -2,7 +2,7 @@
 
 ## 1. Introduction & Installation:
 We introduce a video diffusion transformer to design metasurfaces with a given Eletromagnetic response via generating current distributions at different frequencies.
-To use the pretained model generating currents distributions from a EM response, start by cloning this repository via
+To use the pretained models, start by cloning this repository via
 ```
 git clone https://github.com/WANGYS-truth/Current-Diffusion-Model
 ```
