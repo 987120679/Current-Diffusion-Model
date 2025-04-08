@@ -13,4 +13,7 @@ dependencies:
     - accelerate
     - h5py
     - einops
-    - math
+    - einops_ext
+    - beartype
+    - lmdb
+    - numpy
