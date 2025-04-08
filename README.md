@@ -2,7 +2,6 @@
 
 ## 1. Introduction & Installation:
 We introduce a video diffusion transformer to design metasurfaces with a given Eletromagnetic response via generating current distributions at different frequencies.
-The code is developed based on several works, including [vq-VAE](https://github.com/rosinality/vq-vae-2-pytorch), [VDT](https://github.com/RERV/VDT), and [videoMetamaterials](https://github.com/jhbastek/VideoMetamaterials)
 To use the pretained model generating currents distributions from a EM response, start by cloning this repository via
 ```
 git clone https://github.com/WANGYS-truth/Current-Diffusion-Model
@@ -18,24 +17,15 @@ Next, download the data and models at https://zenodo.org/records/15167559 and pu
 └── sampleStep
     └── *samplingStep*
 ```
+## 2. Environment Setup
+Python 3, Pytorch>=1.13.0, torchvision>=0.17.0 are required for the current codebase.
+You can simply start the envirionment and sintall other dependencies by running:
+```
+conda env create -f environment.yml
+conda activate metaAI
+```
 
-Software dependencies and operating systems: 
-
-* Operating systems: Windows 11
-* Environments: Refer to file **environment.yml**
-* Software Version: 1.0
-* Non-standard Hardware: None
-
-Source code package: 
-* WANGYS-truth/Current-Diffusion-Model-v1.0.zip
-
-Model weights:
-* vq-VAE: vqvae_fullsize_currents_mag_symetricEhance_120.pt
-* Single-layer MetaAI: fullsize_cos_mag_tsqrt_smag_MVDT_605000.pt
-* Two-layer MetaAI: doubleJmagSmag_attnTsqrtCos_MVDT_1530000.pt
-
-
-## 2. Demo:
+## 3. Demo:
 Test Data format:
 > Mag(|S21|) at 19 points spans 2-20 GHz with interval 1 GHz.
 
@@ -47,3 +37,6 @@ Expected output:
 > For each generation of one target:
 > * single-layer MetaAI generates one array with size (19, 2, 128, 128)
 > * two-layer MetaAI generates two arrays with size (19, 2, 128, 128)
+
+## 4. Acknowledgement
+Our codebase is built based on [vq-VAE](https://github.com/rosinality/vq-vae-2-pytorch), [VDT](https://github.com/RERV/VDT), [DIT](https://github.com/facebookresearch/DiT) and [videoMetamaterials](https://github.com/jhbastek/VideoMetamaterials).
