@@ -1,7 +1,23 @@
 # MetaAI
 
-## 1. Installation:
-> Download the code at https://zenodo.org/records/15167559 and configure the running environment.
+## 1. Introduction & Installation:
+We introduce a video diffusion transformer to design metasurfaces with a given Eletromagnetic response via generating current distributions at different frequencies.
+The code is developed based on several works, including [vq-VAE](https://github.com/rosinality/vq-vae-2-pytorch), [VDT](https://github.com/RERV/VDT), and [videoMetamaterials](https://github.com/jhbastek/VideoMetamaterials)
+To use the pretained model generating currents distributions from a EM response, start by cloning this repository via
+```
+git clone https://github.com/WANGYS-truth/Current-Diffusion-Model
+```
+Next, download the data and models at https://zenodo.org/records/15167559 and put them into the work space. We provide the pretrained model weights of both one layer and two layers. The generating currents distributions will be stored in `samples` folder and intermediate results of diffusion process will be stored in `sampleStep` folder.
+```
+.
+├── doubleJmagSmag_attnTsqrtCos_MVDT_1530000.pt(model weight of two-layers)
+├── fullsize_cos_mag_tsqrt_smag_MVDT_605000.pt(model weight of one-layer)
+├── vqvae_fullsize_currents_mag_symetricEhance_120.pt(model weight of vq-VAE)
+├── samples
+│   ├── *nameOfModel*
+└── sampleStep
+    └── *samplingStep*
+```
 
 Software dependencies and operating systems: 
 
