@@ -48,6 +48,6 @@ For each generation of one target:
 > * single-layer MetaAI generates one array with size (2, 19, 128, 128)((4, 19, 32, 32)before vq-VAE decoder)
 > * two-layer MetaAI generates two arrays with size (4, 19, 128, 128)((8, 19, 32, 32)before vq-VAE decoder)
 
-Around 21 seconds per sample if conducted on 1*NVIDIA GeForce RTX 4090 (24GB)
+Around 21 seconds per sample if conducted on 1*NVIDIA GeForce RTX 4090 (24GB).
 ## 4. Acknowledgement
 Our codebase is built based on [vq-VAE](https://github.com/rosinality/vq-vae-2-pytorch), [VDT](https://github.com/RERV/VDT), [DIT](https://github.com/facebookresearch/DiT) and [videoMetamaterials](https://github.com/jhbastek/VideoMetamaterials).
