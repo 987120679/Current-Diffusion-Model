@@ -1,4 +1,4 @@
-name: VDT
+name: metaAI
 channels:
   - pytorch
   - nvidia
@@ -11,3 +11,6 @@ dependencies:
     - timm
     - diffusers
     - accelerate
+    - h5py
+    - einops
+    - math
