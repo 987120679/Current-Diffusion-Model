@@ -13,9 +13,13 @@ Next, download the data and models at https://zenodo.org/records/15167559 and pu
 ├── fullsize_cos_mag_tsqrt_smag_MVDT_605000.pt(model weight of one-layer)
 ├── vqvae_fullsize_currents_mag_symetricEhance_120.pt(model weight of vq-VAE)
 ├── samples
-│   ├── *nameOfModel*
+│   ├── *nameOfModel*(output)
 └── sampleStep
     └── *samplingStep*
+└── vae
+    └── vip
+        └── ol(test EM response of one-layer)
+        └── tl(test EM response of two-layer)
 ```
 ## 2. Environment Setup
 Python 3, Pytorch>=1.13.0, torchvision>=0.17.0 are required for the current codebase.
@@ -27,14 +31,20 @@ conda activate metaAI
 
 ## 3. Demo:
 Test Data format:
-> Mag(|S21|) at 19 points spans 2-20 GHz with interval 1 GHz.
+> Mag(|S21|) at 181 points spans 2-20 GHz.
 
 Instructions to run on test data:
-> Single-layer MetaAI: run **sample_TestS.py**
-> Two-layer MetaAI: run **sample_TestSDoubleJ.py**
+> Single-layer MetaAI:
+```
+python sample_TestS.py
+```
+> Two-layer MetaAI:
+```
+python sample_TestSDoubleJ.py
+```
 
 Expected output:
-> For each generation of one target:
+For each generation of one target:
 > * single-layer MetaAI generates one array with size (19, 2, 128, 128)
 > * two-layer MetaAI generates two arrays with size (19, 2, 128, 128)
 
