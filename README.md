@@ -6,7 +6,7 @@ To use the pretained models, start by cloning this repository via
 ```
 git clone https://github.com/ISEE213/Current-Diffusion-Model
 ```
-Next, download the data and models at https://zenodo.org/records/15167559 and put them into the work space. We provide the pretrained model weights of both one layer and two layers. The generating currents distributions will be stored in `samples` folder and intermediate results of diffusion process will be stored in `sampleStep` folder.
+Next, download the data and models at https://zenodo.org/records/15173899 and put them into the work space. We provide the pretrained model weights of both one layer and two layers. The generating currents distributions will be stored in `samples` folder and intermediate results of diffusion process will be stored in `sampleStep` folder.
 ```
 .
 ├── doubleJmagSmag_attnTsqrtCos_MVDT_1530000.pt(model weight of two-layers)
